@@ -1,0 +1,42 @@
+=========================================
+Database Structure Plan
+=========================================
+
+Tables
+	- users
+		- ID
+		- name
+		- email
+    - role
+		- username
+		- password
+
+	- post (One to one)
+		- ID
+		- authorID (maps to userID)
+		- content
+		- createdAt
+		- updatedAt
+
+	- post_comment (many to many)
+ 		- commentID
+ 		- blogIDs
+
+ 	- comment (One to many)
+ 		- ID
+		- userID
+ 		- comment
+
+ - post_tag (many to many)
+		- tagsID
+		- blogIDs
+
+	- tag (One to many)
+		- ID
+		- tagName
+
+	- viewer (One to One)
+		-	ID
+		- BlogID
+		- 172 countries - int
+		- 3 device type (mobile, tablet, computer)
